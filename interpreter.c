@@ -22,25 +22,39 @@ int main(void)
 			break;
 		}
 		buffer[read_bytes - 1] = '\0'; /*removes newline character*/
-		pid_t child_pid = fork();/*creates child process*/
-
 		parser(buffer, argv, &argc);
 
-		if (child_pid == -1)
+		char *full_path = path_search(argv[0];
+
+		if (full_path != NULL) /*If cmd exist in PATH and its executable*/
 		{
-			perror("fork");
-			exit(EXIT_FAILURE);
-		}
-		else if (child_pid == 0)
-		{
-			if (execve(argv[0], argv, NULL) == -1)
+			pid_t child_pid = fork();/*creates child process*/
+
+			if (child_pid == -1)
 			{
-				perror(argv[0]);
+				perror("fork");
 				exit(EXIT_FAILURE);
 			}
-		}
+			else if (child_pid == 0)
+			{
+				if (execve(full_path, argv, NULL) == -1)
+				{
+					perror(argv[0]);
+					exit(EXIT_FAILURE);
+				}
+			}
+			else
+			{
+				free(full_path);
+				wait(&status);
+			}
 		else
-			wait(&status);
-	}
+		{
+			char err_msg[100];
+
+			_strcpy(err_msg, argv[0]);
+			_strcat(err_msg, ":Command not found");
+			write(STDERR_FILENO, err_msg, _strlen(err_msg));
+		}
 	return (0);
 }

@@ -14,4 +14,13 @@
 /***************parser************/
 void parser(char *std_input, char **argv, int *argc);
 
+/****************PATH*************/
+char *path_search(const char *command)
+
+/***************function1**********/
+char *_strcpy(char *dest, char *src);
+char *_strcat(char *dest, char *src);
+int _strlen(char *s);
+char *_strdup(char *str);
+
 #endif
