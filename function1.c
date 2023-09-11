@@ -26,7 +26,7 @@ char *_strcpy(char *dest, char *src)
  * Return: destination
  */
 
-char *_strcat(char *dest, char *src)
+char *_strcat(char *dest, const char *src)
 {
 	int i;
 	int count1 = 0;
@@ -58,6 +58,7 @@ int _strlen(char *s)
 		count++;
 	return (count);
 }
+
 /**
  * _strdup -  returns a pointer to a newly allocated space in memory
  * which contains a copy of the string given as a parameter.
@@ -69,7 +70,7 @@ int _strlen(char *s)
 char *_strdup(char *str)
 {
 	char *str2;
-	int i, count;
+	int i, count = 0;
 
 	if (str == NULL)
 		return (NULL);
@@ -89,4 +90,18 @@ char *_strdup(char *str)
 	}
 	str2[i] = '\0'; /*add a null byte to end of string*/
 	return (str2);
+}
+/**
+  * _strlen1 - this returns the length of a string
+  * @s: String to count
+  * Return: String length (count)
+  */
+
+int _strlen1(const char *s)
+{
+	int i, count = 0;
+
+	for (i = 0; s[i] != '\0'; i++)
+		count++;
+	return (count);
 }
