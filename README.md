@@ -1,3 +1,1 @@
-# READ ME
-
-This readme file explains the Shell project
+This is file includes the simple shell project.
