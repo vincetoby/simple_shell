@@ -6,7 +6,7 @@
  * Return: 0 on success.
  */
 
-int go_exit(myshell *data) /*edited*/
+int go_exit(myshell *data)
 {
 	unsigned int stat;
 	int digits, len, num;

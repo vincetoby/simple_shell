@@ -6,7 +6,7 @@
  * Return: str
  */
 
-char *comment_del(char *str) /*edited*/
+char *comment_del(char *str)
 {
 	int i, stop;
 
@@ -42,7 +42,7 @@ char *comment_del(char *str) /*edited*/
  * Return: void
  */
 
-void myshell_loop(myshell *data) /*edited*/
+void myshell_loop(myshell *data)
 {
 	int start = 1, i_eof;
 	char *input;

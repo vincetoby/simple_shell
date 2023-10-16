@@ -108,7 +108,7 @@ int _atoi(char *s)
 		{
 			check = 1;
 			ni = (ni * 10) + (s[indx] - '0');
-			c++;
+			indx++;
 		}
 		if (check == 1)
 		{

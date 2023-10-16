@@ -9,7 +9,7 @@
  * Return: void
  */
 
-void liner(char **line_p, size_t *s_line, char *buff, size_t s_buff) /*edited*/
+void liner(char **line_p, size_t *s_line, char *buff, size_t s_buff)
 {
 	if (*line_p == NULL)
 	{

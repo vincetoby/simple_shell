@@ -6,7 +6,7 @@
  * @sept: separators which include ; | &.
  * Return: address of the heads.
  */
-sep_t *add_node_sep(sep_t **h, char sept) /*edited*/
+sep_t *add_node_sep(sep_t **h, char sept)
 {
 	sep_t *sept_n, *tempor;
 
@@ -38,7 +38,7 @@ sep_t *add_node_sep(sep_t **h, char sept) /*edited*/
  * Return: void
  */
 
-void free_separator(sep_t **h) /*edited*/
+void free_separator(sep_t **h)
 {
 	sep_t *tp, *nw;
 

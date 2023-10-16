@@ -6,7 +6,7 @@
  * Return: char input string
  */
 
-char *_readline(int *ret_i_eof) /*edited*/
+char *_readline(int *ret_i_eof)
 {
 	char *in = NULL;
 	size_t size = 0;

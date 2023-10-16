@@ -8,7 +8,7 @@
  * Return: void
  */
 
-void envir_checker(varl **head, char *str, myshell *data) /*edited*/
+void envir_checker(varl **head, char *str, myshell *data)
 {
 	int i = 0, j, c, len;
 	char **envir;
@@ -52,7 +52,7 @@ void envir_checker(varl **head, char *str, myshell *data) /*edited*/
  * Return: num of chars processed
  */
 
-int var_checker(varl **head, char *str, char *stat, myshell *mydata) /*edited*/
+int var_checker(varl **head, char *str, char *stat, myshell *mydata)
 {
 	int i, lenstat, lenpid;
 
@@ -99,7 +99,7 @@ int var_checker(varl **head, char *str, char *stat, myshell *mydata) /*edited*/
  * Return: the replaced string
  */
 
-char *input_replace(varl **head, char *in, char *new_in, int length) /*edited*/
+char *input_replace(varl **head, char *in, char *new_in, int length)
 {
 	varl *ptr;
 	int i = 0, j = 0, k;
@@ -148,7 +148,7 @@ char *input_replace(varl **head, char *in, char *new_in, int length) /*edited*/
  * Return: replaced string
  */
 
-char *var_replace(char *in, myshell *data) /*edited*/
+char *var_replace(char *in, myshell *data)
 {
 	varl *head, *ptr;
 	char *stat, *new_in;
