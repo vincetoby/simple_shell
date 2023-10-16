@@ -97,7 +97,7 @@ int _atoi(char *s)
 {
 	int indx = 0, min = 1, check = 0;
 	unsigned int ni = 0;
-	
+
 	while (s[indx])
 	{
 		if (s[indx] == 45)
