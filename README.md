@@ -1,1 +1,1 @@
-This is file includes the simple shell project.
+This project is all about trying to recreate a simple shell.
