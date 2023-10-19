@@ -92,23 +92,22 @@ typedef struct builtin
 	int (*d)(myshell *data);
 } shell_builtin;
 
-
 /*****functions str*************/
-unsigned int _strspn(char *str, char *accept);
-char *_strchr(char *str, char c);
 int _strcmp(char *str1, char *str2);
+char *_strchr(char *s, char c);
+int _strspn(char *s, char *accept);
 char *_strcpy(char *dest, char *src);
 char *_strcat(char *dest, const char *src);
-int _isdigit(const char *str);
-int char_check(char s[], const char *c);
-char *_strtok(char string[], const char *delimiter);
-int _strlen(const char *string);
 char *_strdup(const char *string);
+int _strlen(const char *string);
+int char_check(char str[], const char *delim);
+char *_strtok(char string[], const char *delimiter);
+int _isdigit(const char *s);
 void rev_string(char *string);
-int fetch_length(int num);
-char *_itoa(int numb);
-int _atoi1(char *str);
 int _atoi(char *s);
+char *_itoa(int n);
+int fetch_length(int n);
+
 
 /********errors******************/
 char *catcd(myshell *data, char *mssg, char *err, char *str);

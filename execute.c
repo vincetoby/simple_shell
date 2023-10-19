@@ -164,7 +164,7 @@ int cmd_errors(char *direc, myshell *data)
 int cmnd_execute(myshell *data)
 {
 	pid_t child, wait;
-	int stat, exe;
+	int state, exe;
 	char *direc;
 	(void) wait;
 
@@ -193,11 +193,11 @@ int cmnd_execute(myshell *data)
 	}
 	else
 	{
-		while (!WIFEXITED(stat) && !WIFSIGNALED(stat))
-		{
-			wait = waitpid(child, &stat, WUNTRACED);
-		}
+		do {
+			wait = waitpid(child, &state, WUNTRACED);
+		} while (!WIFEXITED(state) && !WIFSIGNALED(state));
 	}
-	data->stat = stat / 256;
+
+	data->stat = state / 256;
 	return (1);
 }
